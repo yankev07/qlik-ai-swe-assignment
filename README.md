@@ -107,4 +107,4 @@ curl -X POST "https://qlik-ai-swe-assignment-96327188529.us-west1.run.app/aiswea
 ````
 
 ## API Test with Postman
-![Alt text]([image-url](https://storage.googleapis.com/docebo-image-storage/Images/img1.png))
+![Alt text](https://storage.googleapis.com/docebo-image-storage/Images/img1.png)
