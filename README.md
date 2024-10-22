@@ -12,7 +12,6 @@ This repository contains a scalable microservice developed in Python as part of 
 Clone the Repository:
 
 ````markdown
-```bash
 git clone <repository-url>
 cd qlik-ai-swe-assignment
 ````
