@@ -61,3 +61,10 @@ docker run -p 8000:8000 qlik-ai-swe-assignment
 ````
 
 ## Try it on the Cloud!
+### Cloud API Documentation
+
+- Base URL: https://qlik-ai-swe-assignment-96327188529.us-west1.run.app
+- Endpoint: https://qlik-ai-swe-assignment-96327188529.us-west1.run.app/aisweassignment/<model>/<similarity_type>
+- Method: POST
+- Parameters:
+-    model (string): The model to be used for comparison. Options: openai, qlikllm
