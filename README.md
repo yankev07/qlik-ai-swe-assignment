@@ -70,14 +70,14 @@ docker run -p 8000:8000 qlik-ai-swe-assignment
    - model (string): The model to be used for comparison. Options: "openai", "qlikllm"
    - similarity_type (string): The type of similarity to check. Options: "maxsimilarity" for a similarity threshold of 80% and "minsimilarity" for a similarity threshold of 60%
 - Request Body (JSON):
+   - prompt1: The first text prompt to compare.
+   - prompt2: The second text prompt to compare.
 ````markdown
 {
     "prompt1": "This is my first prompt.",
     "prompt2": "This is my second prompt."
 }
 ````
-   - prompt1: The first text prompt to compare.
-   - prompt2: The second text prompt to compare.
 - Headers
    - Authorization: Bearer Token (Provided separately for testing)
 - Response
