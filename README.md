@@ -67,4 +67,41 @@ docker run -p 8000:8000 qlik-ai-swe-assignment
 - Endpoint: https://qlik-ai-swe-assignment-96327188529.us-west1.run.app/aisweassignment/{model}/{similarity_type}
 - Method: POST
 - Parameters:
-   - model (string): The model to be used for comparison. Options: openai, qlikllm
+   - model (string): The model to be used for comparison. Options: "openai", "qlikllm"
+   - similarity_type (string): The type of similarity to check. Options: "maxsimilarity" for a similarity threshold of 80% and "minsimilarity" for a similarity threshold of 60%
+- Request Body (JSON):
+````markdown
+{
+    "prompt1": "This is my first prompt.",
+    "prompt2": "This is my second prompt."
+}
+````
+   - prompt1: The first text prompt to compare.
+   - prompt2: The second text prompt to compare.
+- Headers
+   - Authorization: Bearer Token (Provided separately for testing)
+- Response
+   - 200: If the request is successful and similarity is computed.
+````markdown
+{
+  "similar": true,
+  "response": "The response from the chosen model"
+}
+````
+   - 200: If the prompts are not similar enough.
+````markdown
+{
+  "similar": false,
+  "message": "Prompts are not similar enough."
+}
+````
+- Example Request
+````markdown
+curl -X POST "https://qlik-ai-swe-assignment-96327188529.us-west1.run.app/aisweassignment/openai/maxsimilarity" \
+     -H "Authorization: <BEARER TOKEN>" \
+     -H "Content-Type: application/json" \
+     -d '{
+           "prompt1": "This is the first prompt.",
+           "prompt2": "This is the second prompt."
+         }'
+````
